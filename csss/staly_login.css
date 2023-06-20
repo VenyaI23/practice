@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+}
+form {
+    max-width: 400px; /* Задаем максимальную ширину формы */
+    margin: 0 auto; /* Центрируем форму по горизонтали */
+    padding: 20px; /* Добавляем отступы внутри формы */
+    border: 1px solid #ccc; /* Добавляем границу для формы */
+    border-radius: 5px; /* Задаем скругление углов для формы */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Задаем ширину 100% */
+    padding: 7px; /* Добавляем отступы внутри текстового поля */
+    border-radius: 3px; /* Задаем скругление углов для текстового поля */
+    border: 1px solid #ccc; /* Добавляем границу для текстового поля */
+}
