@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+
+}
+
+.form-signin {
+    max-width: 330px;
+    /* Задаем максимальную ширину формы */
+    margin: 0 auto;
+    /* Центрируем форму по горизонтали */
+    padding: 20px;
+    /* Добавляем отступы внутри формы */
+    border: 1px solid #ccc;
+    /* Добавляем границу для формы */
+    border-radius: 5px;
+    /* Задаем скругление углов для формы */
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

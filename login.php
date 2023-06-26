@@ -47,28 +47,35 @@ try {
 <div class="container">
 
     <head>
-        <title>Страница авторизации</title>
-        <link rel="stylesheet" href="csss/bootstrap.css">
-        <link rel="stylesheet" href="csss/staly_login.css">
+        <title>Авторизации</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css\staly_login.css">
+
+
     </head>
 
     <body>
-        <h1>Страница авторизации</h1>
+        <main class="form-signin w-100 m-auto">
+            <form method="POST">
+                <?php if (isset($errorMessage)) : ?>
+                    <p style="color: red;"><?php echo $errorMessage; ?></p>
+                <?php endif; ?>
+                <img class="t456__imglogo t456__imglogomobile" src="https://static.tildacdn.info/tild3136-3264-4365-b839-353139343962/image.png" imgfield="img" style="max-width: 160px; width: 160px;" alt="АП Софт">
+                <h1 class="h3 mb-3 fw-normal">Авторизации</h1>
 
-        <?php if (isset($errorMessage)) : ?>
-            <p style="color: red;"><?php echo $errorMessage; ?></p>
-        <?php endif; ?>
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="username" id="username" required>
+                    <label for="floatingInput">Имя пользователя</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" name="password" id="password" required>
+                    <label for="floatingPassword">Пароль</label>
+                </div>
+                <button class="btn btn-primary w-100 py-2" type="submit">Войти</button>
+                <p>Еще не зарегистрированы?<br> <a href="registration.php" class="btn btn-primary w-100 py-2">Регистрация</a></p>
 
-        <form method="POST">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" name="username" id="username" required>
-            <br>
-            <label for="password">Пароль:</label>
-            <input type="password" name="password" id="password" required><br></br>
-
-            <input type="submit" value="Войти" class="btn btn-primary"><br></br>
-            <p>Еще не зарегистрированы?<br> <a href="registration.php" class="btn btn-primary">Регистрация</a></p>
-        </form>
+            </form>
+        </main>
     </body>
 </div>
 

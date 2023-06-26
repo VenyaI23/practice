@@ -16,7 +16,7 @@ $isAdmin = ($role === 'admin');
 
 <head>
     <title>Главная страница</title>
-    <link rel="stylesheet" href="csss/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <style>
         table {
             border-collapse: collapse;
@@ -49,7 +49,7 @@ $isAdmin = ($role === 'admin');
 <body>
     <div class="content-container">
         <h1>Система учёта</h1>
-        <h3>Пользователь: <?php echo $_SESSION['username']?></h3>
+        <h3>Пользователь: <?php echo $_SESSION['username'] ?></h3>
         <h4>Список задач</h4>
 
         <form action="index.php" method="GET">
@@ -136,7 +136,7 @@ $isAdmin = ($role === 'admin');
                         echo '<td>' . $task['assignee'] . '</td>';
                         echo '<td><a href="view_task.php?id=' . $task['id'] . '" class="btn btn-primary">Просмотреть</a></td>';
                         echo '</tr>';
-                    } 
+                    }
                     if (isset($_SESSION['role']) && $_SESSION['role'] === 'programmer' && $task['тип'] === 'разработка') {
                         // Пользователь с ролью "programmer"
                         echo '<tr>';
@@ -161,7 +161,7 @@ $isAdmin = ($role === 'admin');
                         echo '<td>' . $task['assignee'] . '</td>';
                         echo '<td><a href="view_task.php?id=' . $task['id'] . '" class="btn btn-primary">Просмотреть</a></td>';
                         echo '</tr>';
-                    } 
+                    }
                     if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
                         // Пользователь с ролью "admin"
                         echo '<tr>';
@@ -186,7 +186,7 @@ $isAdmin = ($role === 'admin');
                         echo '<td>' . $task['assignee'] . '</td>';
                         echo '<td><a href="view_task.php?id=' . $task['id'] . '" class="btn btn-primary">Просмотреть</a> | <a href="edit_task.php?id=' . $task['id'] . '" class="btn btn-primary">Редактировать</a> | <a href="delete_task.php?id=' . $task['id'] . '" class="btn btn-primary">Удалить</a></td>';
                         echo '</tr>';
-                    } 
+                    }
                 }
 
                 echo '</table>';
